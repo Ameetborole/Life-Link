@@ -1,0 +1,81 @@
+.mainWrapper{
+    box-shadow: 0px 0px 3px 3px #f1f1f1;
+    max-width: 450px;
+    min-height: 400px;
+    border-radius: 8px;
+    margin: 30px auto;
+    padding: 20px;
+    width: 100%;
+}
+
+.FormWrapper{
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    gap: 30px;
+}
+
+.FormWrapper input{
+    padding: 15px;
+    border: 1px solid green;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+.FormWrapper input:focus{
+    outline: none;
+}
+
+.FormWrapper .RegisterBtn{
+    padding: 8px;
+    border-radius: 15px;
+    border: 1px solid green;
+    background-color: rgb(49, 52, 49);
+    font-size: 18px;
+    color:cadetblue;
+    transition: ease-out 500ms;
+    cursor: pointer;
+}
+
+.FormWrapper .RegisterBtn:hover{
+    transform:scale(0.9);
+}
+
+.registration{
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid green;
+    color:grey;
+}
+
+.registration:focus{
+    outline: none;
+}
+
+.backTOLogin{
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: grey;
+}
+
+.regLogin{
+    color: rgb(8, 142, 8);
+    font-size: 20px;
+    margin-left: 4px;
+}
+
+.backTOLogin a{
+    text-decoration: none;
+}
+
+.save{
+    font-size: 20px;
+    text-align: center;
+    margin-top: 10px;
+    color: rgba(6, 35, 6, 0.835);
+}
+
+.hero{
+    margin-top: 10px;
+}

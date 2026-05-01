@@ -1,0 +1,136 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.searchDonorWrapper {
+  width: 100%;
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+/* Heading */
+
+.searchHeading {
+  text-align: center;
+  margin-bottom: 30px;
+  color: green;
+}
+
+.searchHeading h2 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.searchHeading p {
+  font-size: 16px;
+  color: grey;
+}
+
+/* Search Form */
+
+.searchForm {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  box-shadow: 0px 0px 3px 3px #f1f1f1;
+  padding: 25px;
+  border-radius: 10px;
+  max-width: 500px;
+  margin: 0 auto 40px auto;
+}
+
+.searchForm input,
+.searchForm select {
+  padding: 12px;
+  border: 1px solid green;
+  border-radius: 8px;
+  font-size: 14px;
+  outline: none;
+}
+
+select{
+  color:grey;
+}
+
+.searchForm input:focus,
+.searchForm select:focus {
+  border: 1px solid #0a7f2e;
+  box-shadow: 0px 0px 4px rgba(0, 128, 0, 0.2);
+}
+
+.searchDonorBtn,
+.BackToDashboardBtn {
+  padding: 12px;
+  border: 1px solid green;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 15px;
+  transition: 0.4s;
+  background: white;
+  color: grey;
+}
+
+.searchDonorBtn:hover,
+.BackToDashboardBtn:hover {
+  transform: translateY(-2px);
+}
+
+/* Results Section */
+
+.donorResults {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+/* Donor Card */
+
+.donorCard {
+  width: 300px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 3px 3px #f1f1f1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.donorCard h3 {
+  font-size: 22px;
+}
+
+.donorCard p {
+  color: #444;
+  font-size: 15px;
+}
+
+/* Send Request Button */
+
+.sendRequestBtn {
+  margin-top: 10px;
+  padding: 10px;
+  border: 1px solid green;
+  border-radius: 8px;
+  background: white;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.4s;
+}
+
+.sendRequestBtn:hover {
+  transform: translateY(-2px);
+}
+
+/* No donor text */
+
+.noDonor {
+  text-align: center;
+  font-size: 16px;
+  color: grey;
+  margin-top: 20px;
+}

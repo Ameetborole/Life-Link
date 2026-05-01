@@ -1,0 +1,77 @@
+.requestStatusWrapper {
+  width: 100%;
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+.requestStatusHeading {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.requestStatusHeading h2 {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.requestStatusHeading p {
+  font-size: 16px;
+  color: gray;
+}
+
+.logoutbtnReq {
+  display: block;
+  margin: 0 auto 30px auto;
+  padding: 12px 24px;
+  border: 1px solid green;
+  border-radius: 8px;
+  background: white;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.logoutbtnReq:hover {
+  transform: translateY(-2px);
+}
+
+.requestStatusCards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 20px;
+}
+
+.statusCard {
+  border: 1px solid #e5e5e5;
+  border-radius: 12px;
+  padding: 22px;
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.05);
+}
+
+.statusCard h3 {
+  font-size: 22px;
+  margin-bottom: 15px;
+}
+
+.statusCard p {
+  font-size: 15px;
+  margin-bottom: 10px;
+  color: #444;
+}
+
+.viewStatusBtn {
+  width: 100%;
+  margin-top: 15px;
+  padding: 12px;
+  border: 1px solid green;
+  border-radius: 8px;
+  background: white;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.viewStatusBtn:hover {
+  transform: translateY(-2px);
+}

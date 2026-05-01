@@ -1,0 +1,68 @@
+.editRequestWrapper {
+    min-height: 100vh;
+    padding: 40px 20px;
+    font-family: Arial, sans-serif;
+}
+
+.editRequestHeading {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.editRequestHeading h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.editRequestHeading p {
+    font-size: 16px;
+    color: #555;
+}
+
+.editRequestForm {
+    max-width: 550px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    padding: 30px;
+}
+
+.editRequestForm input,
+.editRequestForm textarea {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 14px;
+    resize: none;
+}
+
+.editRequestForm textarea {
+    min-height: 120px;
+}
+
+.editRequestForm input:focus,
+.editRequestForm textarea:focus {
+    outline: none;
+    border: 1px solid #000;
+}
+
+.updateRequestBtn {
+    padding: 12px;
+    border: 1px solid #222;
+    border-radius: 8px;
+    background: transparent;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.updateRequestBtn:hover {
+    transform: translateY(-2px);
+}
+
+.updateRequestBtn:focus {
+    outline: none;
+}

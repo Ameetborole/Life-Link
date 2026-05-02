@@ -16,37 +16,45 @@ function Login() {
     setLoginData((prev) => ({ ...prev, [name]: value }));
   }
 
-function handleLogin() {
+  function handleLogin() {
   axios.post("http://localhost:9000/login", loginData)
     .then((res) => {
-      console.log("Login Response:",res.data)
-      if (
-        res.data.role === "Donor" &&
-        res.data.loginFlag === "Authorized"
-      ) {
-        alert("Logged in as Donor");
-        navigateTo("/donor-dashboard");
+      console.log("Login Response:", res.data);
+      console.log("error here no data sent to db");
+
+      if (res.data.loginFlag === "Authorized") {
+
+        if (res.data.role === "Donor") {
+          alert("Logged in as Donor");
+          navigateTo("/donor-dashboard");
+        }
+
+        else if (res.data.role === "Recipient") {
+          alert("Logged in as Recipient");
+          navigateTo("/recieverDashboard");
+        }
+
+        else {
+          console.log("⚠️ Role is undefined or incorrect:", res.data.role);
+          alert("Role issue. Check backend data.");
+        }
       }
 
-      else if (
-        res.data.role === "Recipient" &&
-        res.data.loginFlag === "Authorized"
-      ) {
-        alert("Logged in as Recipient");
-        navigateTo("/recieverDashboard");
-      }
-
-      else if (
-        res.data.loginFlag === "Unauthorized"
-      ) {
+      else if (res.data.loginFlag === "Unauthorized") {
         alert("Invalid user credentials.");
       }
 
+      else {
+        console.log("⚠️ Unexpected response:", res.data);
+      }
     })
-    .catch(() => {
+    .catch((err) => {
+      console.log("❌ Axios error:", err);
       alert("Error in logging in");
     });
 }
+
+
   return (
     <div>
       <p className="life">Ready to save lifes...</p>

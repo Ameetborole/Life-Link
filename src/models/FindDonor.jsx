@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "../css/findDonor.css";
 import axios from "axios";
-
+import {useNavigate} from "react-router-dom";
 function FindDonor() {
   const [recipientData, setRecipientData] = useState({
     fullname: "",
@@ -24,6 +24,18 @@ function FindDonor() {
       ...prev,
       [name]: type === "checkbox" ? checked : value,
     }));
+  }
+  const navigate=useNavigate();
+  function handleLogin() {
+    navigate("/login-page");
+  }
+
+  function handleSignUp() {
+    navigate("/signup-page");
+  }
+
+  function handleHome(){
+    navigate("/")
   }
 
   function handleSubmit(e) {
@@ -70,6 +82,25 @@ function FindDonor() {
   }
   return (
     <div>
+        <div className="wrapper1">
+        {/* Navbar */}
+        <nav className="navbar">
+          <div className="logo">
+            <h2>Life Link</h2>
+          </div>
+
+          <div className="navButtons">
+            <button className="homebtn" onClick={handleHome}>Home</button>
+            <button className="loginBtn" onClick={handleLogin}>
+              Login
+            </button>
+            <button className="signupBtn" onClick={handleSignUp}>
+              Sign Up
+            </button>
+        </div>
+      </nav>
+      </div>
+
       <div className="FindDonorHeading">
         <h3>Find a Donor</h3>
         <p>Connect with verified kidney donors and get support faster</p>

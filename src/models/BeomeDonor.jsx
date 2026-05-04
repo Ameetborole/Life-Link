@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "../css/becomeDonor.css";
 import axios from "axios";
-
+import {useNavigate} from "react-router-dom"
 function BecomeDonor() {
   const [donorData, setDonorData] = useState({
     fullname: "",
@@ -14,6 +14,19 @@ function BecomeDonor() {
     availability: "",
     checkbox:true
   });
+
+  const navigate=useNavigate();
+  function handleLogin() {
+    navigate("/login-page");
+  }
+
+  function handleSignUp() {
+    navigate("/signup-page");
+  }
+
+  function handleHome(){
+    navigate("/")
+  }
 
   function handleChange(e) {
     const { name, value, type, checked } = e.target;
@@ -62,6 +75,25 @@ function BecomeDonor() {
   }
   return (
     <div>
+      <div className="wrapper1">
+        {/* Navbar */}
+        <nav className="navbar">
+          <div className="logo">
+            <h2>Life Link</h2>
+          </div>
+
+          <div className="navButtons">
+            <button className="homebtn" onClick={handleHome}>Home</button>
+            <button className="loginBtn" onClick={handleLogin}>
+              Login
+            </button>
+            <button className="signupBtn" onClick={handleSignUp}>
+              Sign Up
+            </button>
+        </div>
+      </nav>
+      </div>
+
       <div className="DonorFormHeading">
         <h3>Donor Form</h3>
         <p>A big step towards giving new life to someone needy</p>
@@ -132,7 +164,7 @@ function BecomeDonor() {
           value={donorData.availability}
         >
           <option value="">Availability To Donate</option>
-          <option value="Urgent">Urgent</option>
+          <option value="AvailableNow">Available Now</option>
           <option value="Later">Later</option>
           <option value="NotSure">Not Sure</option>
         </select>

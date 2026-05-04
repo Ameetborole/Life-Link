@@ -96,7 +96,7 @@ function SearchDonor() {
           onChange={handleChange}
         >
           <option value="">Availability</option>
-          <option value="Urgent">Urgent</option>
+          <option value="AvailableNow">Available Now</option>
           <option value="Later">Later</option>
           <option value="Not Sure">Not Sure</option>
         </select>
